@@ -26,8 +26,5 @@ for i in range(len(elf_list)):
     tmp["Elf"] = i
     df = pd.concat([df, tmp])
 
-
-    
-
-
-# %%
+df = df.reset_index()
+df.groupby(by = ["Elf"]).sum()
